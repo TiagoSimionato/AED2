@@ -1,0 +1,22 @@
+#Introdução
+
+A proposta do projeto é fazer um programa para troca de mensagens no qual uma pessoa criar sua conta e com ela enviar mensagens para outras contas e visualizar seu histórico de mensagens.
+Para isso, as contas criadas serão armazenadas em tabelas hash e o envio de mensagens se dará por compressão LZW.
+
+#Descrição
+
+Assim que iniciado, o programa permite o usuário escolher se deseja criar uma nova conta, entrar em uma já existente ou sair do programa.
+Ao criar uma conta, não é possivel reutilizar nenhum nome de usuário já existente e é preciso que a senha seja digitada uma segunda vez para evitar erros.
+Com a conta criada, o nome de usuário é guardado como a chave na tabela hash e a senha é seu valor.
+Quando hover uma tentativa de login, o nome de usuario será buscado na tabela hash para ver se a conta existe, se existir e a senha digitada coincidir, o programa entrará no loop do login.
+Neste é possível enviar mensagens para outros usuários existentes, ver o histórico de mensagens entre o usuário logado e qualquer outro ou deslogar da conta.
+Ao se enviar uma mensagem, ela é comprimida pelo algoritmo LZW e armazenada como um vetor de inteiros em uma estrutura de conversa.
+Quando um usuário desejar ler mensagens, o vetor da mensagens será lido, descomprimido e a string resultante impressa na tela.
+
+#Manual de Uso
+
+Conforme é utilizado, o programa imprime na tela instruções para o usuário indicando o que fazer a seguir.
+Em certos momentos ele pedirá por um número, que representa a escolha do que o usuário deseja que o programa faça a seguir.
+Caso a entrada do usuário não seja uma das opções requisitadas, uma mensagem de opção inválida é mostrada na tela e o usuário tem uma nova chance de escolher.
+Em outros momentos o programa pede pela entrada de uma string que será usada a depender das escolhas prévias do usuário.
+A string pode ser usada para diversas coisas, como criação de contas, tentivas de login, envio de mensagens.
